@@ -34,8 +34,8 @@ class Settings(BaseSettings):
     supabase_service_key: Optional[str] = None
     
     # AI Configuration
-    openai_api_key: Optional[str] = None
-    openai_model: str = "gpt-3.5-turbo"
+    gemini_api_key: Optional[str] = None
+    gemini_model: str = "gemini-pro"
     
     # External Services
     n8n_webhook_url: Optional[str] = None
@@ -56,8 +56,8 @@ class Settings(BaseSettings):
         return bool(self.supabase_url and self.supabase_key)
     
     @property
-    def has_openai_config(self) -> bool:
-        return bool(self.openai_api_key and self.openai_api_key != "your_openai_api_key")
+    def has_gemini_config(self) -> bool:
+        return bool(self.gemini_api_key and self.gemini_api_key != "your_gemini_api_key")
 
 @lru_cache()
 def get_settings() -> Settings:

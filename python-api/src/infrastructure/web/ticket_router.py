@@ -75,7 +75,7 @@ async def health_check(container: Container = Depends(get_container)):
     
     try:
         # Check AI service
-        if container.settings.has_openai_config:
+        if container.settings.has_gemini_config:
             ai_info = container.ai_service.get_model_info()
             services["ai_service"] = f"healthy - {ai_info['model']}"
         else:

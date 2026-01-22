@@ -7,7 +7,7 @@ python-jose[cryptography]
 passlib[bcrypt]
 websockets
 python-dotenv
-openai
+google-generativeai
 httpx
 pytest
 pytest-asyncio

@@ -29,7 +29,7 @@ async def lifespan(app: FastAPI):
     print("🚀 AI-Powered Support Co-Pilot starting...")
     print(f"📝 Environment: {settings.environment}")
     print(f"🗄️  Database: {'In-Memory' if settings.use_in_memory_db else 'Supabase'}")
-    print(f"🤖 AI Service: {'OpenAI' if settings.has_openai_config else 'Not configured'}")
+    print(f"🤖 AI Service: {'Gemini' if settings.has_gemini_config else 'Not configured'}")
     print(f"🔗 WebSocket: Enabled")
     
     yield

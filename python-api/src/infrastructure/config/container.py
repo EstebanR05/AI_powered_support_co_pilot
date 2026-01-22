@@ -10,7 +10,7 @@ from src.ports.websocket_service_port import WebSocketServicePort
 # Adapters
 from src.adapters.database.in_memory_repository import InMemoryTicketRepository
 from src.adapters.database.supabase_repository import SupabaseTicketRepository
-from src.adapters.ai.openai_adapter import OpenAIAdapter
+from src.adapters.ai.gemini_adapter import GeminiAdapter
 from src.adapters.external.notification_adapters import N8nWebhookAdapter, EmailNotificationAdapter
 from src.adapters.external.websocket_adapter import websocket_manager
 
@@ -52,12 +52,12 @@ class Container:
     def ai_service(self) -> AIServicePort:
         """Lazy loading del servicio de IA"""
         if self._ai_service is None:
-            if not self.settings.has_openai_config:
-                raise ValueError("OpenAI API key not configured")
+            if not self.settings.has_gemini_config:
+                raise ValueError("Gemini API key not configured")
             
-            self._ai_service = OpenAIAdapter(
-                api_key=self.settings.openai_api_key,
-                model=self.settings.openai_model
+            self._ai_service = GeminiAdapter(
+                api_key=self.settings.gemini_api_key,
+                model=self.settings.gemini_model
             )
         return self._ai_service
     
