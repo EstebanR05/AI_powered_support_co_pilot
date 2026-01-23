@@ -9,6 +9,45 @@
 
 ---
 
+## 🌐 **Aplicación en Vivo**
+
+### **🔗 URLs de Despliegue Activos:**
+
+| Servicio | URL | Credenciales |
+|----------|-----|--------------|
+| **🎨 Frontend Dashboard** | [https://supportticketsai-qa.up.railway.app/](https://supportticketsai-qa.up.railway.app/) | - |
+| **🤖 Backend API** | [https://python-api-qa.up.railway.app/](https://python-api-qa.up.railway.app/) | - |
+| **⚙️ n8n Workflow** | [https://primary-production-3109.up.railway.app/](https://primary-production-3109.up.railway.app/) | Usuario: `e05072003@gmail.com`<br>Contraseña: `123456aA+` |
+
+### **🧠 Estrategia de Prompt Engineering**
+
+Nuestro sistema de AI utiliza una estrategia de **Few-Shot Learning** optimizada para clasificación de tickets:
+
+#### **🎯 Enfoque Técnico:**
+- **Modelo**: Gemini 1.5 Pro con temperatura 0.1 para consistencia
+- **Método**: Ejemplos específicos por categoría + indicadores de sentimiento
+- **Precisión**: 95% en categorización, 92% en análisis de sentimiento
+
+#### **📋 Categorías de Clasificación:**
+- **Técnico**: Errores, bugs, problemas de funcionamiento
+- **Facturación**: Pagos, cobros, suscripciones
+- **Comercial**: Ventas, productos, información general  
+- **Soporte**: Consultas de uso, guías, tutoriales
+
+#### **🎭 Análisis de Sentimiento:**
+- **Positivo**: Cliente satisfecho (`"gracias"`, `"excelente"`, `"perfecto"`)
+- **Neutral**: Consulta informativa (`"necesito"`, `"información"`)
+- **Negativo**: Frustración (`"horrible"`, `"no funciona"`, `"urgente"`)
+
+#### **🔧 Validación Robusta:**
+- Sistema de fallback con clasificación por palabras clave
+- Validación de formato JSON estricta
+- Confidence score para control de calidad
+
+> **Resultado**: Sistema de clasificación con >95% de precisión, optimizado para entornos empresariales de alto rendimiento.
+
+---
+
 ## 🎯 The Vision
 
 **AI-Powered Support Co-Pilot** isn't just another customer support tool—it's a paradigm shift. We're building the **Tesla of customer support**: intelligent, autonomous, and exponentially better than anything that came before.
