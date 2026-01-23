@@ -1,0 +1,12 @@
+[submodule "python-api"]
+	path = python-api
+	url = https://github.com/supportTicketsAI/python-api.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/supportTicketsAI/frontend
+[submodule "n8n-workflow"]
+	path = n8n-workflow
+	url = https://github.com/supportTicketsAI/n8n-workflow
+[submodule "supabase"]
+	path = supabase
+	url = https://github.com/supportTicketsAI/supabase
